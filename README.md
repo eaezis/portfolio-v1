@@ -19,7 +19,6 @@ Aprender na marra como:
 - Estruturar um projeto web
 - Usar variáveis CSS
 - Fazer deploy no GitHub Pages
-- 
 - Criar um layout simples e responsivo
 
 ## 😎 Sobre mim
