@@ -71,7 +71,7 @@ h2 {
 
 #projetos h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   color: #2c3e50;
   font-size: 28px;
   border-bottom: 2px solid #3498db;
@@ -80,7 +80,7 @@ h2 {
 }
 
 .projeto {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   padding: 20px;
   border: 1px solid #dcdcdc;
   border-radius: 8px;
@@ -94,7 +94,7 @@ h2 {
 }
 
 .projeto h3 {
-  margin-top: 0;
+  margin-top: 13px;
   color: #34495e;
   font-size: 22px;
 }
