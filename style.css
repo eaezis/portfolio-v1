@@ -1,169 +1,133 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100..800&display=swap');
-
 :root {
-  --primaria: #1E3A8A;
-  --secundaria: #3B82F6;
-  --apoio: #60A5FA;
-  --bordas: #93C5FD;
-  --texto: #F1F5F9;
-  --font-padrao: Arial, Verdana, Helvetica, sans-serif;
-  --font-destaque: "Sora", sans-serif;
+    --primaria: #0F172A;
+    --secundaria: #22C55E;
+    --texto: #E2E8F0;
+    --fundo: #1E293B;
+    --font-titulo: 'Bebas Neue', sans-serif;
+    --font-texto: 'Sora', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Sora", sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to left, #60709e, #60A5FA);
+    font-family: var(--font-texto);
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+    padding: 20px;
 }
 
 header {
-  background-color: #4b617b;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+    background: var(--primaria);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--secundaria);
+    padding: 0.75em 1.5em;
+    color: #000;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cta:hover {
+    background: #16a34a;
+    transform: scale(1.05);
 }
 
 section {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto 20px auto; /* Reduz espaçamento entre os blocos */
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
 }
 
-h2 {
-  border-bottom: 2px solid #4b617b;
-  padding-bottom: 5px;
-  margin-top: 0;
+section h2 {
+    color: var(--secundaria);
+    border-bottom: 2px solid var(--secundaria);
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
 }
 
-#sobre,
-#tecnica,
-#soft-skills {
-  background-color: #f1f2f6;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: justify;
+ul {
+    padding-left: 1.2rem;
 }
 
-#tecnica h2,
-#soft-skills h2 {
-  color: #2d3436;
+.projetos-grid {
+    display: grid;
+    gap: 2rem;
+  
+    
 }
 
-#tecnica ul,
-#soft-skills ul {
-  list-style-type: disc;
-  padding-left: 20px;
+@media (min-width: 768px) {
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-#projetos {
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+.projeto-card {
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--primaria);
 
-#projetos h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #2c3e50;
-  font-size: 28px;
-  border-bottom: 2px solid #3498db;
-  display: inline-block;
-  padding-bottom: 8px;
 }
-
-.projeto {
-  margin-bottom: 35px;
-  padding: 20px;
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.projeto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.projeto h3 {
-  margin-top: 13px;
-  color: #34495e;
-  font-size: 22px;
-}
-
-.projeto p {
-  color: #555;
-  line-height: 1.5;
-}
-
-.projeto a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #3498db;
-  color: #fff;
+.projeto-card a {
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  color: var(--secundaria);
 }
 
-.projeto a:hover {
-  background-color: #2980b9;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, button {
-  padding: 10px;
-  border: 1px solid #b2bec3;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #75a4c7;
-  color: white;
+#projetos .projeto-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #dfe6e9;
-  color: black;
+#projetos .projeto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4);
+}
+
+#contato a {
+  margin-right: 10px;
+  color: var(--secundaria);
+  text-decoration: none;
+}
+
+#contato a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 footer {
-  background-color: #dfe6e9;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
+    background: var(--primaria);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
 }
 
-footer > a {
-  text-decoration: none;
-  color: black;
-}
-
-footer a:hover {
-  color: #1E3A8A;
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-  section {
-    padding: 10px;
-  }
+footer a {
+    color: var(--secundaria);
+    margin: 0 0.5rem;
+    text-decoration: none;
 }
